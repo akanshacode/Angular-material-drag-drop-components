@@ -1,0 +1,15 @@
+<div class="outer">
+  <pre>cdkDropListGroup</pre>
+  <div cdkDropListGroup class="container">
+    <div
+      class="list"
+      cdkDropList
+      [cdkDropListData]="divarr[i]"
+      (cdkDropListDropped)="drop(i, $event)"
+      *ngFor="let div of divs; index as i"
+    >
+      <pre style="margin-top:0;">cdkDropList</pre>
+      <pre cdkDrag class="draggable" *ngFor="let str of divarr[i]">{{str}}</pre>
+    </div>
+  </div>
+</div>
